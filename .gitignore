@@ -87,3 +87,10 @@ Thumbs.db
 *.swp
 *~
 .agents/
+
+# -- Unnecessary Documents --
+*.pdf
+*Script*.docx
+*Supervisory*.docx
+*Draft*.docx
+*Logs*.docx
