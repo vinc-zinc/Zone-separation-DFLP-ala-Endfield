@@ -32,16 +32,24 @@ The system optimises factory floor layouts on a 70×70 discrete grid (modelled a
 │                                    #   functions, routing, simulation, DEAP setup
 ├── streamlit_app.py                 # Streamlit dashboard for interactive visualisation
 ├── test_fast_run.py                 # Standalone pipeline script (full run)
-├── test_v6.py                       # V6 architecture pipeline
 ├── DEMO_ZPF_walkthrough.ipynb       # Curated demo notebook (no kernel needed)
-├── flp_definitive_GA_ALNS*.ipynb    # GA (NSGA-II) experiment notebooks
-├── flp_definitive_SA_ALNS*.ipynb    # SA (Simulated Annealing) experiment notebooks
 ├── Full_Thesis_Formatted.docx       # Final formatted thesis (APU template)
-├── Full_Thesis_Draft_Expanded.docx  # Thesis content source
-├── PROBLEM_REGISTER.md              # Engineering log of every defect found and fixed
-├── REVIEW_GA_SA_fixed.md            # GA vs SA comparative review
-├── THESIS_SUMMARY.md                # High-level thesis summary
-└── NOTEBOOK_WALKTHROUGH.md          # Guide to navigating the notebooks
+│
+├── docs/                            # Documentation, summaries & defect tracking
+│   ├── NOTEBOOK_WALKTHROUGH.md      # Guide to navigating experiment notebooks
+│   ├── THESIS_SUMMARY.md            # High-level thesis summary
+│   ├── PROBLEM_REGISTER.md          # Engineering log of defects found and fixed
+│   ├── REVIEW_GA_SA_fixed.md        # GA vs SA comparative review
+│   └── POOL_REWORK_STATUS.md        # Technical status notes
+│
+├── experiments/                     # Raw GA & SA experimental Jupyter notebooks
+│   ├── flp_definitive_GA_ALNS*.ipynb
+│   └── flp_definitive_SA_ALNS*.ipynb
+│
+└── archive/                         # Legacy test runners and utility scripts
+    ├── test_phase2.py
+    ├── test_v6*.py
+    └── test_real.py
 ```
 
 ---
@@ -124,7 +132,7 @@ On the definitive full run (seed 12, 200×50 NSGA-II):
 - **SimEngine validates analytical rates** — simulated throughput matches within 50%+ of analytical estimates
 - **GA (NSGA-II) recovery** outperforms SA on convergence speed (fewer evaluations to best)
 
-See [`PROBLEM_REGISTER.md`](PROBLEM_REGISTER.md) for the full engineering log of 16 defects identified and fixed during development.
+See [`docs/PROBLEM_REGISTER.md`](docs/PROBLEM_REGISTER.md) for the full engineering log of 16 defects identified and fixed during development.
 
 ---
 
