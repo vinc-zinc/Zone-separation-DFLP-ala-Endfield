@@ -74,13 +74,12 @@ The optimisation runs in six phases:
 ### Prerequisites
 
 ```bash
-pip install numpy matplotlib deap streamlit
+pip install -r requirements.txt
 ```
 
 ### Run the Streamlit Dashboard
 
 ```bash
-cd latest
 streamlit run streamlit_app.py
 ```
 
